@@ -1,0 +1,42 @@
+233 rapport
+
+Mye i LinkedList har en kjøretids analyse på O(1), dette er fordi LinkedLists fungerer ved å forandre referanser til
+noder og la garbagecollection fikse sletting av noder. Dei funksjonene som har høyere er:
+
+rest()				O(n)
+	Rest kunne vært O(1) hvis jeg lagde en ny liste og refererte til de samme nodene, men jeg valgte å lage helt
+	nye noder for hele listen, derfor må den iterere gjennom hele listen
+remove(Object o)	O(n)
+	Remove object må iterere gjennom for å finne objektet som skal slettes
+contains()			O(n)
+	Contains må iterere gjennom for å finne objekte, hvis det er der.
+append()			O(n)
+	append må iterere gjennom listen den får
+prepend()			O(n)
+	Samme som prepend
+concat() 			O(n*m)
+	Concat iterere gjennom alle listene den får n, og må kjøre append på alle sammen som og er en O(n) operasjon
+	m, i dette tilfelle
+sort()				O(n log(n))
+	beste sorterigs tiden 
+filter()			O(n)
+	må iterere gjennom alle for å filterere ut
+map()				O(n)
+	Må iterere gjennom alle for å kjøre en funksjon på alle
+reduce()			O(n)
+	Må gjennom alle for å slå dei sammen
+toArray()			O(n)
+	I make array, iterasjon.
+	
+Rapport om test-dreven utvikling.
+Jeg begynnte smått med de første testene for base oppbyggingen av LinkedList, ettersom funksjonene til testene 
+ble implementeret en etter en valgte jeg å fortsette å implementere resten av LinkedList før jeg skrev testene for
+de mer kompliserte funksjonene.  Selve prosessen med de funksjonene jeg brukte test-dreven utvikling på var relativt
+effektivt. Jeg hadde alltid kontroll på om ting funket, eller om bugs ble introdusert.  Seinere når resten av
+testene ble skrevet fant jeg siste resten av bugs (for håpentlingvis).  
+
+Selve prosessen var noe frustrerende når det alltid var noen tester som ikke gikk gjennom, selv om de ikke var
+implementeret.  Denne utviklings metoden er mulig nok ikke noe for meg, men jeg kan se fordelene og ulempene med 
+prosessen.  Det er mye lettere å vite når det funker som det skal, og når du har introdusert en ny bug. 
+Det å skrive testen før metoder ga også en klar bane for hva som måtte introduserers i disse funksjonene. 
+Det var som å skrive oppskriften til klassen før jeg begynnte å lage den.

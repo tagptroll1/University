@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Geo');
+/*litt "fancy fonts"
+font-family: Cabin, sans-serif;
+font-family: Geo, sans-serif; HEADER ETC--
+*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: inherit;
+    color: inherit;
+    list-style: none;
+    border: none;
+}
+.light{
+  color: #3a001a;
+  background-color: #f7dae8;
+}
+.dark{
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.01),rgba(249, 255, 209, 0.2));
+  background-color: #3a001a;
+  color: #f7dae8;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* minimum 110% av høyde på "screen" vh(viewport height vs vw)*/
+}
+
+/*--------- header ---------*/
+header{
+  font-family: Geo , sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  min-height: 20vh;
+}
+
+#h_title{
+  font-size: 4em;
+  text-align: center;
+  margin: auto 0 0 0;
+  padding-top: 20px;
+
+}
+/* ninja "speil av logo"
+#h_title span:nth-child(3){
+  -moz-transform:matrix(1,0,-.7,-0.5,-1.5em,-0.6em);
+  transform:matrix(1,0,-.7,-0.5,-1.5em,-0.6em);
+  position: absolute;
+  opacity: 0.5;
+}
+*/
+/*--------- header nav ---------*/
+.nav{
+  display: flex;
+  width: 100%;
+  font-family: Cabin, sans-serif;
+  margin: auto 10px 5px 10px;
+  justify-content: space-around;
+}
+
+#sok_f{
+  visibility: collapse;
+  cursor: pointer;
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#sok_f:hover{
+  filter:contrast(0.5);
+  box-shadow: 0 -5px 3px -5px #f7dae8;
+}
+
+#usrbutton{
+  top: 5px; right: 5px;
+  position:absolute;
+  font-family: Cabin, sans-serif;
+  color: rgba(70, 4, 42, 0.6);
+  font-size: 0.8em;
+  background-color: rgba(255, 207, 227, 0.7);
+  padding: 5px 10px 2px 10px;
+  border-radius: 10px 0 10px 0;
+}
+#usrbutton:hover{
+  background-color: #c68f9f;
+  color: #2f1e23;
+}
+#usrbutton:active{
+  opacity: 0.9;
+}
+#currentUser{
+  font-weight: bold;
+}
+
+
+/*--------- footer ---------*/
+footer{
+  height: 15em;
+  line-height: 15em;
+  text-align: center;
+  font-family: Geo , sans-serif;
+  text-shadow: 3px 3px 5px black;
+}
+
+/*--------- main ---------*/
+main{
+
+  display: flex;
+  flex: 1 0 auto;
+  padding: 10px 0 10px 0;
+  min-height: 90vh; /*bare for at siden ikke skal bli "for kort"*/
+  box-shadow:
+    0px 7px 5px -5px #1c003a inset,
+    0px -7px 5px -5px #1c003a inset;
+  flex-flow: column;
+}
+
+
+
+
+
+
+/*--------- søkestuff ---------*/
+
+#search{
+  display: flex;
+  justify-content:center;
+  box-shadow: 0px 2px 8px -4px #3a001a;
+  padding-bottom: 10px;
+}
+
+#search_fields{}
+.aSok{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  color:#3a001a;
+  font-family: Cabin, sans-serif;
+}
+
+/*felt*/
+.aSok label{
+  margin-right: 2px;
+}
+.aSok label:after{
+  content: ":";
+}
+.inpt{
+  padding: 0 5px 0 5px;
+  font-family: inherit;
+  box-shadow: 0px 0px 9px -6px #3a001a;
+}
+.inpt:focus{
+  background-color: white;
+}
+.inpt:hover:not(:focus){
+  box-shadow: 0px 2px 15px -6px #3a001a;
+}
+
+/*knapp*/
+#sButton{
+  display: flex;
+  flex-flow: column;
+}
+#submit_search{
+  margin: 10px 0 0 5px;
+  cursor: pointer;
+  height: 1.5em;
+  width: 3em;
+  box-shadow: 0px 1px 5px -3px #3a001a;
+}
+#submit_search:hover{
+  filter: brightness(1.05);
+  transition: .1s all;
+}
+#submit_search:active{
+  opacity: 0.8;
+  box-shadow: 0px 0px 3px 0px #3a001a;
+}
+#submit_search:disabled{
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+
+
+
+/*--------- innhold div (film resultat osv) ---------*/
+/*
+.innhold{border: 1px dotted red;}
+.categoryBox{border: 1px solid blue;}
+.filmer{border: 1px solid red;}
+.filmer ol li{border: 1px solid pink;}
+
+  font-family: Cabin, sans-serif;
+  background: linear-gradient(to top,
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.01),
+    rgba(255, 255, 232, 0.3));
+*/
+
+.innhold{
+
+  font-family: Cabin, sans-serif;
+  margin-top: 5px;
+  box-shadow: 0px 2px 8px -4px #3a001a;
+}
+/*
+.categoryBox{
+  background-color: #e7cbd8;
+  box-shadow: 0px 2px 8px -4px #3a001a;
+  margin: 10px;
+
+}
+
+.section_title{
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+
+*/
+.filmer{
+  display: flex;
+  flex-flow: row wrap;
+}
+.film{
+  border: 1px dotted black;
+  margin: 5px;
+}
+
+.film figure{
+  height: 200px;
+}
+.film_img{
+  height: 80%;
+}
+
+
+
+
+
+
+
+
+/* end..*/
+
+
+
+
+/*SØKESTUFF ubrukt...
+
+.sok{ // div boksen for søkefunksjoner
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.sok input[type="text"]{ // inputfield / søkeboks
+  width: 70%;
+  height: 2em;
+  border-style: none;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 0px #1c003a;
+}
+.sok input[type="text"]:focus{
+  background-color: white;
+  transition: .2s all;
+}
+
+
+#submit_search{ // knappen
+  cursor: pointer;
+  height: 1.8em;
+  width: 3.5em;
+  margin: 0 2px 0 5px;
+  border-radius: 5px;
+
+  box-shadow: 0px 0px 5px 0px #1c003a;
+
+}
+#submit_search:hover{
+  background-color: #1c003a;
+  color:#f7dae8;
+  transition: .2s all;
+
+}
+#submit_search:active{
+  opacity: 0.8;
+}
+
+
+
+
+
+*/

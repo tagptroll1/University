@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="stilark_film.css">
+
+  <script type="text/javascript" src="scripts/object.js" defer></script>
+  <script type="text/javascript" src="scripts/genres.js" defer></script>
+  <script type="text/javascript" src="scripts/reviews.js" defer></script>
+  <script type="text/javascript" src="scripts/query_params.js" defer></script>
+
+  <script type="text/javascript" src="scripts/f_gems.js" defer></script>
+
+  <title>MediaDB - En plass fyllt til randen av gleder!</title>
+</head>
+<body>
+  <header class="dark">
+
+    <div id="h_title" onclick="tilbake()"><span>MediaDB</span><br></div>
+
+    <a href="#logout" id="usrbutton">
+      <span id="innutlog">LogUt: </span>
+      <span id="currentUser">BLEH362</span>
+    </a>
+
+  </header>
+  <main class="light">
+    <div class="innhold">
+
+
+
+
+      <!--filmdata-->
+      <section id="filmMain">
+
+        <figure id="fTop">
+          <img id="fBilde" src="https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="(Film Bilde.)">
+          <span id="favstatus">favoritt!</span>
+          <figcaption>
+            <h1 id="fTittel"></h1>
+            <span id="arsTall"></span>
+            <span id="fLengde"></span>
+            <span id="avgRating"></span>
+            <!--Youtube trailer-->
+          </br></br><a id="ytube" href="#linktiltrailer" target="_blank" >Youtube Trailer!</a>
+
+          </figcaption>
+        </figure>
+
+      <!-- ### fBottom ## -->
+
+        <div id="fBottom">
+          <p id="fDesc"></p>
+          <span id="fRegissor"></span>
+          <!--skuespiller liste-->
+          <h3 id="sku">Skuespillere:</h3>
+          <ul id="actorList"></ul>
+        </div>
+
+
+      </section>
+
+
+      <!--brukerstuff-->
+      <section id="userContent">
+
+          <!--comments-->
+          <div id="commentSection">
+            <h3 id="rev">Kommentarer:</h3>
+            <ul id="uRev"></ul>
+          </div>
+
+          <!--ny kommentar input-->
+          <form id="newUserComment" action="" method="get">
+            <label for="kommentar">Kommentar:</label>
+            <input id="kommentar" type="text" name="kommentar" placeholder="- skriv kommentar her ">
+            <select id="minRating" name="minRating">
+              <option value="5">5 stjerner</option>
+              <option value="4">4 stjerner</option>
+              <option value="3">3 stjerner</option>
+              <option value="2">2 stjerner</option>
+              <option value="1">1 stjerne</option>
+              <option value="0">0 stjerne</option>
+            </select>
+            <input type="submit" id="nyKommentar" value="kommenter" >
+          </form>
+
+            <button type="button" name="fav" id="fav">Favoriser denne filmen!</button>
+            <button type="button" name="button" name="lan" id="lan">Lån film!</button>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </main>
+  <footer class="dark">
+    <p>... Help me hide the body!</p>
+  </footer>
+
+  <script type="text/javascript">
+    //---utlogging?
+    usrbutton.onclick = function () {
+      //magic happens..?
+      usrbutton.innerHTML = "du er logget ut eller noe...";
+    }
+
+    // tilbake ett steg
+    function tilbake() {
+      window.history.back();
+    }
+  </script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!--
+-bilde
+-tittel
+  -tittel
+  -avgRating
+  -arstall
+  -lengde
+-tekstDesc
+-resi
+-actors
+-yTrailer
+-->
+
+
+
+<!--
+-userReview
+  -user
+  -indivRating
+  -uComment
+-comment,rating,submit.
+-(knapp) lån film/film er lånt..?
+-(knapp) favoritt?
+-->

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Geo');
+/*litt "fancy fonts"
+font-family: Cabin, sans-serif;
+font-family: Geo, sans-serif; HEADER ETC--
+*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: inherit;
+    color: inherit;
+    list-style: none;
+    border: none;
+}
+.light{
+  color: #3a001a;
+  background-color: #f7dae8;
+}
+.dark{
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.01),rgba(249, 255, 209, 0.2));
+  background-color: #3a001a;
+  color: #f7dae8;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* minimum 110% av høyde på "screen" vh(viewport height vs vw)*/
+}
+
+/*--------- header ---------*/
+header{
+  font-family: Geo , sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  min-height: 15vh;
+}
+
+#h_title{
+  font-size: 2em;
+  text-align: center;
+  margin: auto 0 0 0;
+  padding-top: 20px;
+}
+#h_title:hover{
+  cursor: pointer;
+}
+#h_title:hover:after{
+  content: "tilbake!";
+  font-size: 0.4em;
+  font-family: Cabin, sans-serif;
+  position: absolute;
+  opacity: 0.5;
+  display: block;
+}
+
+/*--------- header nav ---------*/
+.nav{
+  display: flex;
+  width: 100%;
+  font-family: Cabin, sans-serif;
+  margin: auto 10px 5px 10px;
+  justify-content: space-around;
+}
+
+#usrbutton{
+  top: 5px; right: 5px;
+  position:absolute;
+  font-family: Cabin, sans-serif;
+  color: rgba(70, 4, 42, 0.6);
+  font-size: 0.8em;
+  background-color: rgba(255, 207, 227, 0.7);
+  padding: 5px 10px 2px 10px;
+  border-radius: 10px 0 10px 0;
+}
+#usrbutton:hover{
+  background-color: #c68f9f;
+  color: #2f1e23;
+}
+#usrbutton:active{
+  opacity: 0.9;
+}
+#currentUser{
+  font-weight: bold;
+}
+
+
+/*--------- footer ---------*/
+footer{
+  height: 15em;
+  line-height: 15em;
+  text-align: center;
+  font-family: Geo , sans-serif;
+  text-shadow: 3px 3px 5px black;
+}
+
+/*--------- main ---------*/
+main{
+  display: flex;
+  flex: 1 0 auto;
+  padding: 10px 0 10px 0;
+  min-height: 90vh; /*bare for at siden ikke skal bli "for kort"*/
+  box-shadow:
+    0px 7px 5px -5px #1c003a inset,
+    0px -7px 5px -5px #1c003a inset;
+
+}
+
+
+/*--------- main - film---------*/
+/*
+.innhold{border: 2px dotted black;}
+#fTop{border: 2px dotted tomato;}
+#fBottom{border: 1px dotted green;}
+#filmMain{border: 1px solid blue;}
+#userContent{border: 1px solid gray;}
+
+*/#fTop figcaption{border: 3px solid gray;}
+
+/* wrapper innhold*/
+.innhold{
+  font-family: Cabin, sans-serif;
+  margin: 10%;
+  display: flex;
+  flex-flow: column;
+
+  box-shadow:
+    4px 0px 5px -5px #1c003a,
+    -4px 0px 5px -5px #1c003a;
+  background: linear-gradient(rgb(247, 230, 223,0.1),rgb(152, 152, 152,0.1));
+}
+
+
+
+/*fTop: bilde og tittel fig*/
+#fTop{
+  display: flex;
+  flex-flow:row wrap-reverse;
+  margin: 10px;
+
+}
+#fBilde{
+  height: 20em;
+}
+#fTop figcaption{
+
+}
+#fTop a{
+  text-shadow: 1px 1px 5px blue;
+  text-decoration: underline;
+}
+#fTop a:visited{
+  color: pink;
+}
+/*favoritt (knapp)*/
+
+
+/*vis om filmen er favorisert
+>> visibility: visible;
+*/
+#favstatus{
+  visibility: collapse;
+  position: absolute;
+  text-shadow: 1px 1px 3px black;
+  margin: 10px;
+  color: white;
+}
+
+
+/*fBottom: regissør,skuespillere mm. + trailerlink??*/
+#fBottom{
+  margin: 10px;
+}
+#actorList li:before{
+  content: "- "
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* userContent: komentarfelt og komentarmulighet */
+
+#commentSection{
+  box-shadow:
+    0px 7px 5px -5px #1c003a inset,
+    0px -7px 5px -5px #1c003a inset;
+  padding: 10px;
+  margin: 5px;
+}
+
+.user{
+  font-weight: bold;
+}
+.enKomentar{
+  display: block;
+  margin: 5px;
+  border: 1px solid white;
+}
+
+
+#komentar{
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+figure img{
+  max-height: 70vh;
+}
+figcaption{
+  margin: 5px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+*/

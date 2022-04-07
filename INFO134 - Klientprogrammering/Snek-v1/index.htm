@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="stilark.css">
+
+  <script type="text/javascript" src="scripts/gems.js" defer></script>
+
+  <!-- mor skriipt -->
+  <script type="text/javascript" src="scripts/object.js" defer></script>
+  <script type="text/javascript" src="scripts/genres.js" defer></script>
+  <script type="text/javascript" src="scripts/query_params.js" defer></script>
+  <script type="text/javascript" src="scripts/search_results.js" defer></script>
+
+  <title>MediaDB - En plass fyllt til randen av gleder!</title>
+
+</head>
+<body>
+  <header class="dark">
+
+    <div id="h_title"><span>MediaDB</span></br></div>
+
+    <a href="#logout" id="usrbutton">
+      <span id="innutlog">LogUt: </span>
+      <span id="currentUser">BLEH362</span>
+    </a>
+
+    <nav class="nav"><!--bruker en nav class, om det skulle være ønskelig å endre tag-->
+      <span id="sok_f">Film Søk <span>&#9660;</span><span>&#9650;</span></span>
+
+    </nav>
+
+  </header>
+  <main class="light">
+
+
+
+      <form id="search" action="" method="get">
+        <div id="search_fields">
+
+          <!--søke divs-->
+          <div class="aSok">
+            <label for="actor">Filmtittel</label>
+            <input class="light inpt" id="film_title" name="film_title" type="text" placeholder="e.g. Superman" >
+          </div>
+            <!--skuespillere-->
+            <div class="aSok">
+      				<label for="actor">Skuespiller</label>
+      				<input class="light inpt" id="actor" name="actor" type="text" placeholder="e.g. Tom Cruise" >
+            </div>
+            <!--regissør-->
+            <div class="aSok">
+      				<label for="director">Regissør</label>
+      				<input class="light inpt" id="director" name="director" type="text" placeholder="e.g. Tom Hanks" >
+            </div>
+            <!--sjanger-->
+            <div class="aSok">
+      				<label for="genre">Sjanger</label>
+      				<input class="light inpt" id="genre" name="genre" type="text" placeholder="e.g. Drama">
+            </div>
+            <!--land-->
+            <div class="aSok">
+      				<label for="country">Land</label>
+      				<input class="light inpt" id="country" name="country" type="text" placeholder="e.g. Frankrike">
+            </div>
+
+          </div>
+
+
+
+          <!--knapp-->
+          <div id="sButton">
+            <input class="light" type="submit" id="submit_search" value="Søk" >
+          </div>
+        </form>
+
+    </div>
+
+    <!--resultat-->
+    <div class="innhold"><!--beholder for "innhold" dvs. film resultat-->
+
+
+
+
+
+      <!--dette er en "kategori / eller søkeresultat..."-->
+      <section class="categoryBox">
+        <h3 class="section_title">Søkeresultat for: <span id="sokestreng"></span></h3>
+        <ol class="filmer"></ol>
+        <button type="button" id="prevgroupbutton">Prev page</button>
+        <span id="pagenumber"></span>
+        <button type="button" id="nextgroupbutton">Next page</button>
+      </section>
+
+
+
+
+
+    </div>
+
+  </main>
+  <footer class="dark">
+    <p>... Help me hide the body!</p>
+  </footer>
+
+  <script type="text/javascript">
+    //---utlogging?
+    usrbutton.onclick = function () {
+      //magic happens..?
+      usrbutton.innerHTML = "du er logget ut eller noe...";
+    }
+  </script>
+
+
+</body>
+</html>
